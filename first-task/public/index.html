@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Widget Library</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="widget-container" ondrop="drop(event)" ondragover="allowDrop(event)" id="widgets-container1">
+            <select name="add-widget"></select>
+        </div>
+        <div class="widget-container" ondrop="drop(event)" ondragover="allowDrop(event)" id="widgets-container2">
+            <select name="add-widget"></select>
+        </div>
+        <div class="widget-container" ondrop="drop(event)" ondragover="allowDrop(event)" id="widgets-container3">
+            <select name="add-widget"></select>
+        </div>
+    </div>
+
+    </script>
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.stopPropagation();
+            event.dataTransfer.setData("id", event.target.id);
+        }
+
+        function drop(event) {
+            var id = event.dataTransfer.getData("id");
+            var dropTarget = event.target;
+
+            if (dropTarget.classList.contains('widget-container')) {
+                event.target.appendChild(document.getElementById(id));
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+.widget {
+	padding: 4px;
+	border: 1px solid #ada9a9;
+	border-radius: 4px;
+}
+
+.button-holder {
+	display: flex;
+	justify-content: end;
+}
+
+.button {
+	border: 0px;
+	background-color: transparent;
+	font-size: medium;
+}
+
+.button:hover {
+	cursor: pointer;
+}

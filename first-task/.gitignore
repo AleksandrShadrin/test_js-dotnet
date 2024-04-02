@@ -1,0 +1,22 @@
+# Dependency directories
+node_modules/
+
+# dotenv environment variables file
+.env
+.env.test
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Webpack assets and output
+/dist/
+/built/
+/build/
+/assets/
+
+# Temporary files
+*.tmp
+*.temp
+
+# VS Code project settings
+.vscode/
