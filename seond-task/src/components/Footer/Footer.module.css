@@ -1,0 +1,11 @@
+.footer {
+	background-color: var(--mantine-color-gray-1);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.logo {
+	fill: var(--mantine-color-gray-6);
+	width: 140px;
+}
