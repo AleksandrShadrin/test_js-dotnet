@@ -34,6 +34,22 @@ public class EventsServiceTests
     }
 
     [Fact]
+    public void ScheduleEvent_ShouldThrowException_WhenStartAtInPast()
+    {
+        // ARRANGE
+        var description = new string('1', EventConsts.MinimumDescriptionLength);
+        var scheduleAt = DateTime.UtcNow.AddDays(-1);
+
+        var request = new ScheduleEventRequest(scheduleAt, description, 0, 1);
+
+        // ACT
+        var act = () => _eventsService.ScheduleEvent(request);
+
+        // ASSERT
+        act.Should().Throw<ArgumentException>();
+    }
+
+    [Fact]
     public void UpdateEvent_ShouldCorrectlyUpdateEvent()
     {
         // ARRANGE
