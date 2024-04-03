@@ -36,6 +36,6 @@ public class Comment : EntityWithCreationTime<int>
         if (string.IsNullOrWhiteSpace(content)
                     || content.Length < CommentConsts.MinimumContentLength
                     || content.Length > CommentConsts.MaximumContentLength)
-            throw new ArgumentException("Content length is not valid");
+            throw new ArgumentOutOfRangeException("Content length is not valid");
     }
 }

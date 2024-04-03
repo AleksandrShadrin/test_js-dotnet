@@ -54,4 +54,37 @@ public class CommentTests
         // ASSERT
         act.Should().NotThrow<Exception>();
     }
+
+    [Fact]
+    public void UpdateContent_ShouldWorkCorrectly()
+    {
+        // ARRANGE
+        var comment = GetComment();
+        var newContent = new string('2', PostConsts.MinimumContentLength);
+
+        // ACT
+        comment.UpdateContent(newContent);
+
+        // ASSERT
+        comment.Content.Should().Be(newContent);
+    }
+
+    [Theory]
+    [InlineData(CommentConsts.MinimumContentLength - 1)]
+    [InlineData(CommentConsts.MaximumContentLength + 1)]
+    public void UpdateContent_ShouldThrowException_WhenContentIsNotValid(int contentLength)
+    {
+        // ARRANGE
+        var comment = GetComment();
+        var newContent = new string('2', contentLength);
+
+        // ACT
+        var act = () => comment.UpdateContent(newContent);
+
+        // ASSERT
+        act.Should().Throw<ArgumentOutOfRangeException>();
+    }
+
+    public Comment GetComment() 
+        => new Comment(new Author(), new string('1', CommentConsts.MinimumContentLength), DateTime.UtcNow);
 }
