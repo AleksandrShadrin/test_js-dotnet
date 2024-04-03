@@ -42,7 +42,7 @@ export default function Speakers() {
 				justify="center"
 				align="center"
 				pb="50px"
-				px="calc(20% - 25px)"
+				px="calc(35% - 270px)"
 			>
 				{profile}
 				{profile}
