@@ -28,7 +28,6 @@ public class Comment : EntityWithCreationTime<int>
     private static void ValidateAndThrow(Author author, string content)
     {
         ArgumentNullException.ThrowIfNull(author);
-
         ValidateContent(content);
     }
 

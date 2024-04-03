@@ -64,7 +64,7 @@ public class Post : EntityWithCreationTime<int>
         if (string.IsNullOrWhiteSpace(content)
                     || content.Length < PostConsts.MinimumContentLength
                     || content.Length > PostConsts.MaximumContentLength)
-            throw new ArgumentException("Content length is not valid");
+            throw new ArgumentOutOfRangeException("Content length is not valid");
     }
 
     private static void ValidatePreview(string preview)
@@ -72,6 +72,6 @@ public class Post : EntityWithCreationTime<int>
         if(string.IsNullOrWhiteSpace(preview)
                     || preview.Length < PostConsts.MinimumPreviewLength
                     || preview.Length > PostConsts.MaximumPreviewLength)
-            throw new ArgumentException("Preview length is not valid");
+            throw new ArgumentOutOfRangeException("Preview length is not valid");
     }
 }
