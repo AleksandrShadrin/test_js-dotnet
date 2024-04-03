@@ -11,7 +11,7 @@ export default function Registration() {
 					Регистрация
 				</Title>
 			</Button>
-			<Modal opened={opened} onClose={close} title="Регистрация">
+			<Modal opened={opened} onClose={close} title="Регистрация" centered>
 				<Stack gap="sm">
 					<Input placeholder="ФИО" />
 					<Input placeholder="Место работы" />
