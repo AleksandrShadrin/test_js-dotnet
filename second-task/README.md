@@ -1,5 +1,9 @@
-# Mantine Vite template
+# Верстка
 
-Get started with the template by clicking `Use this template` button on the top of the page.
+Для просмотра
 
-[Documentation](https://mantine.dev/guides/vite/)
+```bash
+npm run dev
+```
+
+Или перейдя по [ссылке](https://660d0038b1ee0f9a5ccad759--subtle-eclair-38e3b7.netlify.app/)

@@ -18,12 +18,7 @@ const theme = createTheme({
 function App() {
 	return (
 		<MantineProvider theme={theme}>
-			<Flex
-				direction="column"
-				mih="100vh"
-				miw="var(--mantine-breakpoint-sm)"
-				justify="space-between"
-			>
+			<Flex direction="column" mih="100vh" miw="var(--mantine-breakpoint-sm)">
 				<Header />
 				<Welcome />
 				<Speakers />

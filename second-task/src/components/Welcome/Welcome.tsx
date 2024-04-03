@@ -1,4 +1,4 @@
-import { Container, Flex, Table, Text, Title } from "@mantine/core";
+import { Container, Flex, Table, Text } from "@mantine/core";
 
 import classes from "./Welcome.module.css";
 import Registration from "../Registration/Registration";
