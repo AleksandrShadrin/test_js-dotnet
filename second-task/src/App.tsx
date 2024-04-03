@@ -1,5 +1,5 @@
 import Header from "./components/Header/Header";
-import { Container, Flex, MantineProvider, createTheme } from "@mantine/core";
+import { Flex, MantineProvider, createTheme } from "@mantine/core";
 
 import "@mantine/core/styles.css";
 import Welcome from "./components/Welcome/Welcome";
