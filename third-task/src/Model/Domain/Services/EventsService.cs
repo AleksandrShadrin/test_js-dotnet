@@ -2,13 +2,13 @@
 
 namespace Model.Domain;
 
-public interface IEventService
+public interface IEventsService
 {
     Event ScheduleEvent(ScheduleEventRequest request);
     void UpdateEvent(UpdateEventRequest request);
 }
 
-public class EventService : IEventService
+public class EventsService : IEventsService
 {
     public Event ScheduleEvent(ScheduleEventRequest request)
     {

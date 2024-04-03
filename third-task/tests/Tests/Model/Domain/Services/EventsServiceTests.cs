@@ -4,13 +4,13 @@ using Model.Domain.Requests;
 
 namespace Tests.Model.Domain.Services;
 
-public class EventServiceTests
+public class EventsServiceTests
 {
-    private readonly EventService _eventService;
+    private readonly EventsService _eventsService;
 
-    public EventServiceTests()
+    public EventsServiceTests()
     {
-        _eventService = new();
+        _eventsService = new();
     }
 
     [Fact]
@@ -23,7 +23,7 @@ public class EventServiceTests
         var request = new ScheduleEventRequest(scheduleAt, description, 0, 1);
 
         // ACT
-        var @event = _eventService.ScheduleEvent(request);
+        var @event = _eventsService.ScheduleEvent(request);
 
         // ASSERT
         @event.Should()
@@ -48,7 +48,7 @@ public class EventServiceTests
         var request = new UpdateEventRequest(@event, newStartAt, newDescription, 1, 2);
 
         // ACT
-        _eventService.UpdateEvent(request);
+        _eventsService.UpdateEvent(request);
 
         // ASSERT
         @event.Should()
