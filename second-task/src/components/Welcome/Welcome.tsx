@@ -1,6 +1,7 @@
 import { Container, Flex, Table, Text, Title } from "@mantine/core";
 
 import classes from "./Welcome.module.css";
+import Registration from "../Registration/Registration";
 
 export default function Welcome() {
 	return (
@@ -21,9 +22,7 @@ export default function Welcome() {
 				</Text>
 			</Container>
 			<Container className={classes["text-container"]}>
-				<Title order={1} ta={{ xs: "left", sm: "center" }}>
-					Регистрация
-				</Title>
+				<Registration />
 				<Text py="md">
 					Пожалуйста, проверьте правильность введенных данных:<br></br>
 				</Text>
