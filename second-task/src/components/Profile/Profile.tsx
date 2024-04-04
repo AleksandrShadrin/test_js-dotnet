@@ -1,7 +1,5 @@
 import { Avatar, Flex, Text } from "@mantine/core";
 
-import classes from "./Profile.module.css";
-
 type Props = {
 	image: React.ReactNode;
 	size: string;
@@ -13,9 +11,7 @@ type Props = {
 export default function Profile({ image, size, title, content, width }: Props) {
 	return (
 		<Flex direction="column" gap="sm" align="center" w={width}>
-			<Avatar size={size} className={classes.body}>
-				{image}
-			</Avatar>
+			<Avatar size={size}>{image}</Avatar>
 			<Text fw="bold" size="26px" ta="center">
 				{title}
 			</Text>
