@@ -54,11 +54,12 @@ class WeatherWidget extends BaseWidget {
 
 			this.#weatherService.getCurrentTemperature(city).then((temperature) => {
 				if (temperature) {
-					this.#select.disabled = false;
 					resultFieldElement.innerText = `Current temperature in ${city}: ${temperature}°C`;
 				} else {
 					resultFieldElement.innerText = `Error in processing for ${city}`;
 				}
+
+				this.#select.disabled = false;
 			});
 		};
 	}
