@@ -6,7 +6,7 @@ import Registration from "../Registration/Registration";
 export default function Welcome() {
 	return (
 		<Flex className={classes.body} align="center" gap="lg" pl="sm">
-			<Container className={classes["text-container"]} visibleFrom="sm">
+			<Container className={classes["text-container"]} visibleFrom="sm" pl="sm">
 				<Text ta={{ sm: "left", md: "center" }}>
 					Дорогие друзья! <br></br>
 					<br></br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -21,7 +21,7 @@ export default function Welcome() {
 					feugiat in fermentum.
 				</Text>
 			</Container>
-			<Container className={classes["text-container"]}>
+			<Container className={classes["text-container"]} p={{ xs: 0, sm: "sm" }}>
 				<Registration />
 				<Text py="md">
 					Пожалуйста, проверьте правильность введенных данных:<br></br>
