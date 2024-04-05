@@ -6,4 +6,4 @@
 npm run dev
 ```
 
-Или перейдя по [ссылке](https://660d06dcbb7e399fd3e0b654--subtle-eclair-38e3b7.netlify.app/)
+Или перейдя по [ссылке](https://6610103f1f1aca009a039989--subtle-eclair-38e3b7.netlify.app/)
